@@ -17,7 +17,7 @@ def confirmExit():
 
 def trigFileSelect():
     global trigFile
-    trigFile = askopenfilename()
+    trigFile = askopenfilename(initialdir="Data\Trig")
     if str(trigFile) == "":
         trigFile = "Trigger Data File Path"
     trigLabel.config(text=trigFile)
@@ -29,7 +29,7 @@ def trigFileSelect():
 
 def posFileSelect():
     global posFile
-    posFile = askopenfilename()
+    posFile = askopenfilename(initialdir="Data\MoCap")
     if str(posFile) == "":
         posFile = "Position Data File Path"
     posLabel.config(text=posFile)
